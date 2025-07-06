@@ -2,7 +2,7 @@
 /* FONT-FACE */
 @font-face {
     font-family: 'Italiana';
-    src: url('Italiana-Regular.woff2') format('woff2');
+    src: url('../Fonts/Italiana-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: 'Sora';
-    src: url('Sora-Regular.woff2') format('woff2');
+    src: url('../Fonts/Sora-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -18,7 +18,7 @@
 
 @font-face {
     font-family: 'Jost';
-    src: url('Jost-Regular.woff2') format('woff2');
+    src: url('../Fonts/Jost-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
