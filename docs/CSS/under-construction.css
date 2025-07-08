@@ -45,16 +45,18 @@ body.under-construction {
     color: var(--Eucalyptus);
     margin: 0;
     padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
     text-align: center;
 }
 
 .container {
     max-width: 800px;
     padding: 2rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
 }
 
 h1 {
@@ -65,6 +67,7 @@ h1 {
 
 p {
     font-family: 'Jost', sans-serif;
+    font-weight: 100;
     font-size: 20px;
     margin-bottom: 2rem;
 }
@@ -86,4 +89,33 @@ p {
     max-width: 100%;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.nav-logo img {
+    height: 120px;
+    width: auto;
+    max-width: 100%;
+    display: block;
+}
+
+footer {
+    padding: 2rem 1rem;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-credit img {
+    height: 100px;
+    width: auto;
+    margin-top: 0.5rem;
 }
