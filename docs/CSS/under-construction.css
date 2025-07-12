@@ -161,3 +161,27 @@ footer {
         padding: 1.5rem 1rem;
     }
 }
+
+.social-icons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: .75rem;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    margin: 0 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.15);
+    opacity: 0.8;
+}
