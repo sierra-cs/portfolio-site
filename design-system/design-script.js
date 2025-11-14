@@ -15,6 +15,26 @@ cards.forEach(card => {
     });
 });
 
+cards.forEach(card => {
+    const swatch = card.querySelector('.color-swatch');
+    const info = card.querySelector('.color-info');
+    let holdTimer;
+
+    card.addEventListener('touchstart', () => {
+        holdTimer = setTimeout(() => {
+            swatch.style.opacity = '0';
+            info.style.opacity = '1';
+        }, 500);
+        
+    });
+
+    card.addEventListener('touchend', () => {
+        clearTimeout(holdTimer);
+            swatch.style.opacity = '1';
+            info.style.opacity = '0';
+    });
+});
+
 /* Hover Interaction for Typography */
 const fonts = document.querySelectorAll('.samples-container');
 
@@ -30,6 +50,26 @@ fonts.forEach(font => {
     font.addEventListener('mouseleave', () => {
         text.style.opacity = '1';
         info.style.opacity = '0';
+    });
+});
+
+fonts.forEach(font => {
+    const text = font.querySelector('.font-samples');
+    const info = font.querySelector('.typography-info');
+    let holdTimer;
+
+    font.addEventListener('touchstart', () => {
+        holdTimer = setTimeout(() => {
+            text.style.opacity = '0';
+            info.style.opacity = '1';
+        }, 500);
+        
+    });
+
+    font.addEventListener('touchend', () => {
+        clearTimeout(holdTimer);
+            text.style.opacity = '1';
+            info.style.opacity = '0';
     });
 });
 
@@ -188,3 +228,10 @@ logoCards.forEach(card => {
 });
 
 document.getElementById('year').textContent = new Date().getFullYear();
+
+const hamburgerMenu = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburgerMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('nav-active');
+});
