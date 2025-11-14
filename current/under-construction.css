@@ -1,0 +1,252 @@
+/* UNDER CONSTRUCTION PAGE STYLES */
+/* FONT-FACE */
+@font-face {
+    font-family: 'Italiana';
+    src: url('../assets/Fonts/italiana-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sora';
+    src: url('../assets/Fonts/sora-regular.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url('../assets/Fonts/jost-regular.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url('../assets/Fonts/jost-italic.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Brand Colors*/
+:root {
+    --Onyx: #262A2E;
+    --Mist: #ABBFB8;
+    --Matcha: #B9CBAF;
+    --Oat: #F1EADA;
+    --Eucalyptus: #3E5034;
+    --Pine: #40534C;
+    --Cedar: #693F0D;
+    --Espresso: #251E0E;
+    --Ash: #E3E4E1;
+
+}
+
+body {
+    background-color: var(--Espresso);
+    font-family: 'Sora', sans-serif;
+    color: var(--Ash);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    padding: 2rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+h1 {
+    font-family: 'Sora', sans-serif;
+    font-size: 48px;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-family: 'Jost', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    margin-bottom: 2rem;
+}
+
+.signature {
+    font-family: 'Italiana';
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--Matcha);
+}
+
+.video-placeholder {
+    margin-bottom: 1rem 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+.video-placeholder video {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--Espresso);
+    border-bottom: 2px solid var(--Cedar);
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo img {
+    height: 48px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding-right: 4rem;
+}
+
+.nav-links a {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    color: var(--Ash);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--Cedar);
+}
+
+.nav-logo a {
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.nav-logo a:hover {
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+        padding-right: 0;
+    }
+}
+
+footer {
+    padding: 2rem 1rem;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--Matcha);
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.footer-credit img {
+    height: 100px;
+    width: auto;
+    margin-top: 0.5rem;
+}
+
+/* MEDIA RESPONSIVENESS */
+@media (max-width: 600px) {
+    .nav-logo img {
+        height: 80px;
+    }
+
+    .footer-credit img {
+        height: 80px;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 36px;
+    }
+    
+    p {
+        font-size: 16px;
+    }
+
+    .signature {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .video-placeholder {
+        max-width: 90%;
+    }
+
+    .video-placeholder video {
+        border-radius: 8px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1.5rem 1rem;
+    }
+}
+
+.social-icons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    margin: 0 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.15);
+    opacity: 0.8;
+}
